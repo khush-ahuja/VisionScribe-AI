@@ -1,5 +1,7 @@
 # VisionScribe AI
 
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/khush-ahuja/VisionScribe-AI/blob/main/colab_train.ipynb)
+
 Image captioning with a **CNN encoder and LSTM decoder** in PyTorch, trained on Flickr8k. Upload a photo and get a one-sentence description, optionally read aloud, which makes it useful for accessibility.
 
 ## How it works
@@ -38,7 +40,7 @@ data/Flickr8k/Images/*.jpg
 data/Flickr8k/captions.txt
 ```
 
-**2. Train both encoders.** A GPU is recommended; Google Colab's free T4 works.
+**2. Train both encoders.** A GPU is recommended. The easiest route is the Colab notebook above: it downloads the data, trains both models and prints the BLEU table.
 
 ```bash
 python train.py --data data/Flickr8k --backbone densenet121 --out runs/densenet121
