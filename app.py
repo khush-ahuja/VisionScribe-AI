@@ -11,7 +11,7 @@ from PIL import Image
 from caption import caption_image
 from evaluate import load_run
 
-RUN_DIR = "runs/densenet121"
+RUN_DIR = "runs/resnet50"
 
 
 @st.cache_resource
@@ -23,7 +23,7 @@ def get_model():
 
 st.set_page_config(page_title="VisionScribe AI", page_icon="🖼️")
 st.title("VisionScribe AI")
-st.caption("Image captioning with a DenseNet-121 encoder and LSTM decoder, trained on Flickr8k.")
+st.caption("Image captioning with a ResNet-50 encoder and LSTM decoder, trained on Flickr8k.")
 
 upload = st.file_uploader("Upload an image", type=["jpg", "jpeg", "png"])
 beam = st.slider("Beam size", 1, 5, 3)
