@@ -1,7 +1,7 @@
 """Caption one or more images with a trained checkpoint.
 
 Example:
-    python caption.py --run runs/densenet121 path/to/dog.jpg path/to/beach.jpg
+    python caption.py --run runs/resnet50 path/to/dog.jpg path/to/beach.jpg
 """
 import argparse
 
@@ -22,7 +22,7 @@ def caption_image(model, vocab, image: Image.Image, device="cpu", beam=3) -> str
 def main():
     p = argparse.ArgumentParser()
     p.add_argument("images", nargs="+")
-    p.add_argument("--run", default="runs/densenet121")
+    p.add_argument("--run", default="runs/resnet50")
     p.add_argument("--beam", type=int, default=3)
     args = p.parse_args()
     device = "cuda" if torch.cuda.is_available() else "cpu"
