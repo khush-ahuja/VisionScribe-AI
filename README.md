@@ -20,7 +20,7 @@ image ─► ResNet-50 / DenseNet-121 (ImageNet-pretrained) ─► 256-d embeddi
 
 ## Results
 
-Held-out Flickr8k test split (1,000 images, 5 reference captions each), beam size 3. Both models use the same LSTM decoder, vocabulary, training budget (12 epochs, early stopping on validation BLEU-4) and a single Colab T4 GPU.
+Held-out Flickr8k test split (1,000 images, 5 reference captions each), beam size 3. Both models use the same LSTM decoder, vocabulary, training budget (12 epochs, early stopping on validation BLEU-4) and a single T4 GPU.
 
 | Encoder | BLEU-1 | BLEU-2 | BLEU-3 | BLEU-4 |
 |---|---|---|---|---|
